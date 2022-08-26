@@ -1,0 +1,425 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* remove default underline of hyperlinks */
+a {
+  text-decoration: none;
+}
+
+/* limit width of HTML body and center it */
+body {
+  margin: auto;
+  max-width: 1080px;
+  padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/* clear default styling of button from browsers */
+button {
+  border: none;
+  background-color: white;
+}
+
+/* change cursor type to pointer when over a button or link */
+button:hover, a:hover, .selector:hover, .cardItem:hover, .searchBar img:hover{
+  cursor: pointer;
+}
+
+
+/* set the navigation bar */
+.navBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items: stretch;
+  column-gap: 2em;
+  row-gap: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 0.8em;
+}
+
+.titleBar{
+  margin-right: 2px;
+  font-size: 1.8em;
+  font-weight: 700;
+  /* background-color: aliceblue; */
+}
+
+.searchBar{
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.selector{
+  flex-grow: 1;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.2);
+  padding: 0.443em;
+}
+
+.searchBar input {
+  flex-grow: 1;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.2);
+  padding: 0.5em;
+}
+
+.searchBar button, .loginBox button, .checkButton, .addToCartButton{
+  padding: 0.45em 1em;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.08);
+  font-size: 100%;
+  color:black;
+  text-align:center;
+}
+
+.searchImg {
+  display: inline-flex;
+  flex-grow: 1;
+  vertical-align: middle;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  margin-bottom: 0.1em;
+  height: 2.05em;
+}
+
+/* set the user bar, including cart div block */
+.userBar {
+  flex-grow: 1;
+  text-align: right;
+  padding-top: 0.25em;
+  font-size: 1.2em;
+  color: rgb(12, 12, 152);
+}
+
+.cartIcon {
+  display: inline;
+  margin-right: 2em;
+}
+
+.cartIcon img{
+  vertical-align: bottom;
+}
+
+.cartIcon:hover{
+  cursor: pointer;
+}
+
+
+/* Set login page related */
+/* Login page style */
+.loginBox{
+  text-align: center;
+  margin: 6em auto;
+  padding-bottom: 1.5em;
+  border-style: double;
+  border-color: rgba(11, 25, 48, 0.446);
+
+  width: 50%;
+  font-size: 1.2em;
+}
+
+
+.loginBox input{
+  margin-bottom: 10px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.2);
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.loginBox button{
+  font-size: 1em;
+}
+
+.searchBar input:focus, .loginBox input:focus{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.searchBar button:hover, .loginBox button:hover, .cardItem:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.stepper button:hover, .checkButton:hover, .addToCartButton:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 3px;
+}
+
+
+/* Use flex box for products display page */
+.productCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin: 2em;
+  column-gap: 2em;
+  row-gap: 2em;
+  justify-content: center;
+}
+
+.cardItem {
+  /* There will be 4 cards per row */
+  flex-basis: 20%;
+
+  border-style: solid;
+  border-color: rgba(11, 25, 48, 0.446);
+  border-radius: 10px;
+  
+  padding-top: 0.5em;
+  text-align: center;
+
+  font-size: 1.2em;
+}
+
+
+/* Style detail product information page */
+.detailProductPage{
+  margin-top: 2em;
+}
+
+.detailProductContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+}
+
+.detailProductInfo{
+  margin-left: 10em;
+}
+
+.addToCart{
+  margin-top: 1em;
+  margin-left: 5em;
+  padding: 2em;
+  padding-bottom: 4em;
+  
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+  height: 4em;
+}
+
+.quantityHint{
+  display: inline-flex;
+  font-size: 1.1em;
+  margin-right: 1em;
+}
+
+.addToCart input{
+  width: 3em;
+  height: 2em;
+}
+
+/* no offical way for styling input arrows, only work for chrome */
+.addToCart input[type=number]::-webkit-inner-spin-button{
+  opacity: 1;
+}
+
+.counter {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  display: inline-flex;
+  width: 5em;
+  height: 3em;
+}
+
+.counterQuant {
+  border-color: transparent;
+  width: 1em;
+  padding-top: 0.8em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.counterButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.counterButton {
+  border-color: transparent;
+  /* Make buttons have the same height */
+  flex: 1;
+}
+
+
+
+
+
+
+.addToCartButton{
+  display: block;
+  font-size: 1.1em;
+  margin: 0 auto;
+  margin-top: 0.8em;
+}
+
+/* set the infomation and go back font size */
+.addToCart p, .detailProductPage p{
+  font-size: 1.2em;
+}
+
+.goBack{
+  text-align: center;
+}
+
+
+/* set the page related to succesfully added */
+.cartPage {
+  margin-top: 2em;
+}
+
+.addedRow{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+}
+
+.addedHint{
+  margin-left: 8em;
+  padding: 5em;
+}
+
+.addedHint, .cartPage p {
+  font-size: 1.2em;
+}
+
+.cartPage p{
+  text-align: center
+}
+
+
+/* Set the checkout page */
+.cartHeader{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+  font-size: 1.2em;
+  column-gap: 10em;
+}
+
+.headerPrice{
+  margin-right: 4em;
+}
+
+.headerQuant{
+  margin-right: 0em;
+}
+
+.cartRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  column-gap: 10em;
+  font-size: 1.2em;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  margin-top: 0.5em;
+}
+
+.cartImg{
+  width: 10em;
+}
+
+.cartName{
+  flex-grow: 1;
+  padding-top: 2.5em;
+  text-align: center;
+
+  width: 8em;
+}
+
+.cartPrice{
+  flex-grow: 1;
+  padding-top: 2.5em;
+  text-align: center;
+}
+
+.cartStepper input{
+  height: 2em;
+  width: 4em;
+  float: right;
+}
+
+.cartStepper input[type=number]::-webkit-inner-spin-button{
+  opacity: 1;
+}
+
+.cartStepper{
+  flex-grow: 1;
+  padding-top: 2.4em;
+  font-size: 0.85em;
+}
+
+/* .cartStepper{
+  flex-grow: 1;
+  padding-top: 2em;
+  font-size: 0.85em;
+} */
+
+.cartStepper .counter{
+  float: right;
+}
+
+.checkoutPage p, .checkoutMsgPage p{
+  text-align: center;
+  font-size: 1.2em; 
+}
+
+.checkoutMsgPage{
+  margin-top: 5em;
+}
+
+.checkButton{
+  display: block;
+  margin: 0 auto;
+  font-size: 1.2em;
+}
